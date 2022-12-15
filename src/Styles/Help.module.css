@@ -1,0 +1,21 @@
+.Card{
+    width: 240px;
+    padding: 35px 40px;
+    border: 1px solid rgb(216, 216, 216);
+}
+.Heading{
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.Text{
+    color: rgb(93, 93, 93);
+    font-size: 13px;
+    padding-bottom: 20px;
+}
+.Questions{
+    padding: 0px 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 50px;
+    background-color: white;
+}
