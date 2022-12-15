@@ -13,63 +13,63 @@ import {
 
   export default function Footer() {
     return (
-      <Box>
-        <Container  maxW='5xl' py={10}>
+      <Box bg="#2BB670" color="#edf0d1">
+        <Container maxW='5xl' py={10}>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 5 }} spacing={8}>
             <Stack align={'flex-start'}>
-              <Text fontWeight={'700'} fontSize={{base:'10px', md:"13px"}} mb={2}>General</Text>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Home</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Sign Up</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Businesses / Restaurateurs</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Advertising</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >About KindMeal.my</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Help & FAQ</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Terms & Conditions</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Inspiring Partners</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Lifestyle Ambassadors</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Jobs & Careers</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Contact Us</Link>
+              <Text fontWeight={'700'} fontSize={{base:'11px', md:"15px"}} mb={2}>General</Text>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Home</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Sign Up</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Businesses / Restaurateurs</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Advertising</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >About KindMeal.my</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Help & FAQ</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Terms & Conditions</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Inspiring Partners</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Lifestyle Ambassadors</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Jobs & Careers</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Contact Us</Link>
             </Stack>
             <Stack align={'flex-start'}>
-              <Text fontWeight={'700'} fontSize={{base:'10px', md:"13px"}}>Features</Text>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Meat-Free Deals</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Tasty Menus</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Kind Moments</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Meat-Free Recipes</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Member Recommendations</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Featured Restaurants</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Vegetarian & Vegan Directory</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Food Map</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Become A Superhero</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Vegan News & Vegetarian Articles</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Latest Comments</Link>
+              <Text fontWeight={'700'} fontSize={{base:'11px', md:"15px"}}>Features</Text>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Meat-Free Deals</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Tasty Menus</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Kind Moments</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Meat-Free Recipes</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Member Recommendations</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Featured Restaurants</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Vegetarian & Vegan Directory</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Food Map</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Become A Superhero</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Vegan News & Vegetarian Articles</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Latest Comments</Link>
             </Stack>                                  
             <Stack align={'flex-start'}>
-              <Text fontWeight={'700'} fontSize={{base:'10px', md:"13px"}}>Social Media</Text>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >KindMeal Widget</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Facebook</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Twitter</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Instagram</Link>
+              <Text fontWeight={'700'} fontSize={{base:'11px', md:"15px"}}>Social Media</Text>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >KindMeal Widget</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Facebook</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Twitter</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Instagram</Link>
             </Stack>
             <Stack align={'flex-start'}>
-              <Text fontWeight={'700'} fontSize={{base:'10px', md:"13px"}}>Exciting Promos</Text>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Gadhimai: Ending Mass Slaughter</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Free Meals</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Food Bloggers</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Uber CHIRP</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Jane Goodall Contest</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Win Digi iPhone 6</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Feed The Poor</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Win Superhero Gifts</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Win an iPad Mini 3</Link>
+              <Text fontWeight={'700'} fontSize={{base:'11px', md:"15px"}}>Exciting Promos</Text>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Gadhimai: Ending Mass Slaughter</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Free Meals</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Food Bloggers</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Uber CHIRP</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Jane Goodall Contest</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Win Digi iPhone 6</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Feed The Poor</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Win Superhero Gifts</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Win an iPad Mini 3</Link>
             </Stack>
             <Stack align={'flex-start'}>
-              <Text fontWeight={'700'} fontSize={{base:'10px', md:"13px"}}>PetFinder.my</Text>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Adopt A Pet</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Smartphone Apps</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >WAGazine</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Discussion Forum</Link>
-              <Link href={'#'} fontWeight="500" fontSize={{base:'9px', md:"11px"}} >Medical Fund</Link>
+              <Text fontWeight={'700'} fontSize={{base:'11px', md:"15px"}}>PetFinder.my</Text>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Adopt A Pet</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Smartphone Apps</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >WAGazine</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Discussion Forum</Link>
+              <Link href={'#'} fontWeight="500" fontSize={{base:'10px', md:"13px"}} >Medical Fund</Link>
             </Stack> 
           </SimpleGrid>
         </Container>

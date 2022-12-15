@@ -1,0 +1,18 @@
+
+.images:hover{
+    border: 10px solid black;
+    cursor: pointer;
+}
+.container {
+    position: relative;
+    background:white;
+}
+
+.image {
+  opacity: 0.3;
+  transition: .5s;
+}
+
+.container:hover .image {
+  opacity: 1;
+}
