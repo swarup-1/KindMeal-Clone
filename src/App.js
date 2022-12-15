@@ -1,11 +1,11 @@
 import './App.css';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar'
-// import allRoutes from './Components/allRoutes.jsx';
+import AllRoutes from "./Components/AllRoutes"
 function App() {
   return <>
     <Navbar/>
-    {/* <allRoutes/> */}
+    <AllRoutes/>
     <Footer/>
   </>
 }
