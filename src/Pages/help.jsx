@@ -7,8 +7,6 @@ import {
   Text,
   Image,
   Flex,
-  Heading,
-  Spacer,
   Divider,
  } from '@chakra-ui/react'
 function Help() {
