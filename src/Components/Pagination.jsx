@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Icon } from "@chakra-ui/react";
 import {ArrowRightIcon,ArrowLeftIcon} from '@chakra-ui/icons'
 
+
 function Pagination({totalPages, currentPage, handlePage , handleChange}){
     let pages = new Array(totalPages).fill(0).map((page,i)=> 
         <Button disabled={currentPage === i+1} key={i+1} fontSize='1vw' colorScheme='blue' variant='ghost' onClick={()=>{handlePage(i+1)}} > {i+1}  </Button>
