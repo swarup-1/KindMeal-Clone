@@ -162,6 +162,8 @@ function Home() {
       ],
     },
   ]
+
+  
   return (
   <Box background= "linear-gradient(180deg, rgba(255,255,255,1) 52%, rgba(233,233,233,1) 100%)">
     <Center>
@@ -215,23 +217,3 @@ export default Home
 
 
 
-              {/* <Box w="200px">
-                <Image src={e.elements.images.img1} h="200px" w="100%" objectFit='cover' borderRadius="5px"/>
-                <Link textAlign="justify" fontSize="12px" >{e.elements.links.link1}</Link>
-              </Box>
-              <Box w="200px">
-                <Image src={e.elements.images.img2} h="200px" w="100%" objectFit='cover' borderRadius="5px"/>
-                <Link textAlign="justify" fontSize="12px" >{e.elements.links.link2}</Link>
-              </Box>
-              <Box w="200px">
-                <Image src={e.elements.images.img3} h="200px" w="100%" objectFit='cover' borderRadius="5px"/>
-                <Link textAlign="justify" fontSize="12px" >{e.elements.links.link3}</Link>
-              </Box>
-              <Box w="200px">
-                <Image src={e.elements.images.img4} h="200px" w="100%" objectFit='cover' borderRadius="5px"/>
-                <Link textAlign="justify" fontSize="12px" >{e.elements.links.link4}</Link>
-              </Box>
-              <Box w="200px">
-                <Image src={e.elements.images.img5} h="200px" w="100%" objectFit='cover' borderRadius="5px"/>
-                <Link textAlign="justify" fontSize="12px" >{e.elements.links.link5}</Link>
-              </Box> */}
