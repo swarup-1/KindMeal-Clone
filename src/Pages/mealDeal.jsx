@@ -44,9 +44,12 @@ function MealDeal() {
   const handleChange=(p)=>{
     setPage((page)=>page+p)
   }
+  const handleSearchChange=(e)=>{
+    console.log("eeeeeeeeeee",e)
+  }
   return (
     <Box background= "linear-gradient(180deg, rgba(255,255,255,1) 52%, rgba(233,233,233,1) 100%)">
-      <Center bg="#f0f0f0">
+      <Center bg="#f0f0f0" mb="20px">
         <Box p="20px" w="80%" >
           <Flex gap="20px">
             <Text fontWeight="500" fontSize="3xl">Meat-Free Deals</Text>
@@ -56,22 +59,40 @@ function MealDeal() {
           <Text fontSize="sm" p="10px 0px">Browse delicious meat-free, vegetarian deals from top restaurants and cafes! Just click on "Get Free Coupon" to obtain instant discounts and dine at the restaurants. No upfront payment, booking or printing is needed. If you share it on social media, you'll even DOUBLE your discount!</Text>
           <Text fontSize="sm" p="10px 0px">Download our mobile app now to easily get coupons and start dining in a few seconds. Effortlessly save lives, health, environment and money now!</Text>
           <Flex gap="30px">
-            <Input bgColor="white" placeholder="Search Shop or Deal Name" p="0.5%" variant='unstyled' border="1px solid gray" />
-            <Select placeholder='All Categories' bgColor="white">
-              <option value='option1'>Option 1</option>
-              <option value='option2'>Option 2</option>
-              <option value='option3'>Option 3</option>
+            <Input bgColor="white" onChange={((e)=>handleSearchChange(e.target.value))} placeholder="Search Shop or Deal Name" p="0.5%" variant='unstyled' border="1px solid gray" />
+            <Select bgColor="white">
+              <option value="">All Categories</option>
+              <option value="Pasta">Pasta</option>
+              <option value="Burger">Burger</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Bakery">Bakery</option>
+              <option value="Cute">Cute</option>
+              <option value="Tea & Desserts"> Tea & Desserts</option>
+              <option value="Indian">Indian</option>
+              <option value="Chinese">Chinese</option>
+              <option value="Soup">Soup</option>
+              <option value="Salads">Salads</option>
             </Select>
-            <Select placeholder='All Locations' bgColor="white">
-              <option value='option1'>Option 1</option>
-              <option value='option2'>Option 2</option>
-              <option value='option3'>Option 3</option>
+            <Select bgColor="white">
+              <option value="All Locations">All Locations</option>
+              <option value="Klang vally">Klang vally</option>
+              <option value="Kualalumpur">Kualalumpur</option>
+              <option value="Petaling Jaya">Petaling Jaya</option>
+              <option value="Ipoh">Ipoh</option>
+              <option value="Bangsar">Bangsar</option>
+              <option value="Cheras">Cheras</option>
+              <option value="Perek">Perek</option>
+              <option value="Sepang">Sepang</option>
+              <option value="Taman Desa">Taman Desa</option>
+              <option value="Subang">Subang</option>
             </Select>
-            <Button p="10px 80px" colorScheme='red' color="white">Button</Button>
-            <Button p="10px 80px" colorScheme='green' color="white">Button</Button>
+            <Button p="10px 80px" colorScheme='red' color="white">Search Deals</Button>
+            <Button p="10px 80px" colorScheme='green' color="white">Browse Restaurants</Button>
           </Flex>
         </Box>
       </Center>
+      <Box align="center"><Image src="https://www.kindmeal.my/images/ads/banner_janegoodall_message.jpg" alt="meals_footer_image" /></Box>
+
       <Pagination  totalPages={total} currentPage={page} handlePage={handlePage} handleChange={handleChange} />
       <Center mb="50px">
         <SimpleGrid columns={{sm:1, md:2}} spacing='50px' w="75%">

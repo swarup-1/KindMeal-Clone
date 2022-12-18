@@ -202,6 +202,10 @@ function Home() {
           </Flex>
         </Center>
       ))}
+        <Box bgColor="white" align="center"><Image src="https://www.kindmeal.my/images/media-feature2.png" alt="meals_footer_image" /></Box>
+        <Box bgColor="gray.100" >
+          <Box align="center"><Image src="https://www.kindmeal.my/images/banner_whykindmeal.png" alt="meals_footer_image" /></Box>
+        </Box>
   </Box>
   )
 }

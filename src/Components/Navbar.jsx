@@ -80,7 +80,7 @@ const Navbar = () => {
                 <Center><Image src='https://www.kindmeal.my/images/join_shop.png' w="300px" pl="10px"/></Center>
                 <Stack>
                   <CardBody>
-                    <Heading size='md'>	Restaurant / Shop Owne</Heading>
+                    <Heading size='md'>	Restaurant / Shop Owner</Heading>
                     <Text py='2' fontSize="sm">List your food outlet, create exciting vegetarian deals & showcase your delicious menu for FREE. Enjoy our yummy deals, share reviews & meet food lovers too.</Text>
                   </CardBody>
                 </Stack>
