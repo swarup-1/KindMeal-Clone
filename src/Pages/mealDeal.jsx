@@ -18,35 +18,39 @@ import {
 function MealDeal() {
   const [data,setData] = useState([])
   const [total,setTotal] = useState(1)
-  const [page,setPage] = useState(1)  
-  const getData=(page)=>{
-    axios.get(`http://localhost:3000/mealDeal`,{
+  const [page,setPage] = useState(1) 
+  const [searchLocation,setSearchLocation] = useState("") 
+
+
+  useEffect(()=>{
+    axios.get(`https://kindmeal-3kea.onrender.com/mealDeal`,{
       params:{
         _page:page,
-        _limit:6
+        _limit:searchLocation=="" ? 6 : 40 
       }
     }).then((res)=>{
-      console.log(res.data)
-      setData(res.data)
-      setTotal(Math.floor(40/6))
+      if(searchLocation==""){
+        setData(res.data)
+        setTotal(Math.floor(40/6))
+      }else{
+        const newData = res.data.filter((el)=>{
+          return el.location==searchLocation
+        })
+        setData(newData)
+      }
     })
     .catch((err)=>console.log(err))
-  }
-  console.log('page:', page)
-  console.log('data:', data)
-  console.log('total:', total)
-  useEffect(()=>{
-    getData(page)
-  },[page])
+  },[page,searchLocation])
+
+
+  // console.log('data:', data)
   const handlePage =(p)=>{
     setPage(p)
   }
   const handleChange=(p)=>{
     setPage((page)=>page+p)
   }
-  const handleSearchChange=(e)=>{
-    console.log("eeeeeeeeeee",e)
-  }
+  console.log('data:', data)
   return (
     <Box background= "linear-gradient(180deg, rgba(255,255,255,1) 52%, rgba(233,233,233,1) 100%)">
       <Center bg="#f0f0f0" mb="20px">
@@ -60,31 +64,31 @@ function MealDeal() {
           <Text fontSize="sm" p="10px 0px">Download our mobile app now to easily get coupons and start dining in a few seconds. Effortlessly save lives, health, environment and money now!</Text>
           <Flex gap="30px">
             <Input bgColor="white"placeholder="Search Shop or Deal Name" p="0.5%" variant='unstyled' border="1px solid gray" />
-            <Select bgColor="white">
+            <Select bgColor="white" onChange={(e)=>setSearchLocation(e.target.value)}>
               <option value="">All Categories</option>
-              <option value="Pasta">Pasta</option>
-              <option value="Burger">Burger</option>
-              <option value="Breakfast">Breakfast</option>
-              <option value="Bakery">Bakery</option>
-              <option value="Cute">Cute</option>
-              <option value="Tea & Desserts"> Tea & Desserts</option>
-              <option value="Indian">Indian</option>
-              <option value="Chinese">Chinese</option>
+              <option value="2">Pasta</option>
+              <option value="3">Burger</option>
+              <option value="1">Breakfast</option>
+              <option value="5">Bakery</option>
+              <option value="4">Cute</option>
+              <option value="5"> Tea & Desserts</option>
+              <option value="1">Indian</option>
+              <option value="2">Chinese</option>
               <option value="Soup">Soup</option>
               <option value="Salads">Salads</option>
             </Select>
-            <Select bgColor="white">
-              <option value="All Locations">All Locations</option>
-              <option value="Klang vally">Klang vally</option>
-              <option value="Kualalumpur">Kualalumpur</option>
-              <option value="Petaling Jaya">Petaling Jaya</option>
-              <option value="Ipoh">Ipoh</option>
-              <option value="Bangsar">Bangsar</option>
-              <option value="Cheras">Cheras</option>
-              <option value="Perek">Perek</option>
-              <option value="Sepang">Sepang</option>
-              <option value="Taman Desa">Taman Desa</option>
-              <option value="Subang">Subang</option>
+            <Select bgColor="white" onChange={(e)=>setSearchLocation(e.target.value)}>
+              <option value="">All Locations</option>
+              <option value="1">Klang vally</option>
+              <option value="2">Kualalumpur</option>
+              <option value="3">Petaling Jaya</option>
+              <option value="4">Ipoh</option>
+              <option value="5">Bangsar</option>
+              <option value="4">Cheras</option>
+              <option value="2">Perek</option>
+              <option value="1">Sepang</option>
+              <option value="5">Taman Desa</option>
+              <option value="3">Subang</option>
             </Select>
             <Button p="10px 80px" colorScheme='red' color="white">Search Deals</Button>
             <Button p="10px 80px" colorScheme='green' color="white">Browse Restaurants</Button>

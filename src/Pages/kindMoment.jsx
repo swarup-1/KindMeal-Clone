@@ -7,28 +7,32 @@ function KindMoment() {
   const [data,setData] = useState([])
   const [total,setTotal] = useState(1)
   const [page,setPage] = useState(1)  
-  // const [color, setColor] = useState(style1)
-  // const style1={colorScheme:'white', color:"black", border:"1px solid gray"}
-  // const style2={colorScheme:'red', color:"white", border:"1px solid gray"}
-  const getData=(page)=>{
-    axios.get(`http://localhost:3000/moment`,{
+  const [color, setColor] = useState(1)
+  const style2={background:'white', color:"black", border:"1px solid gray"}
+  const style1={background:'green', color:"white", border:"1px solid gray"}
+  const [searchLocation,setSearchLocation] = useState("") 
+
+
+  useEffect(()=>{
+    axios.get(`https://kindmeal-3kea.onrender.com/moment`,{
       params:{
         _page:page,
-        _limit:6
+        _limit:searchLocation=="" ? 6 : 40 
       }
     }).then((res)=>{
-      console.log(res.data)
-      setData(res.data)
-      setTotal(Math.floor(40/6))
+      if(searchLocation==""){
+        setData(res.data)
+        setTotal(Math.floor(40/6))
+      }else{
+        const newData = res.data.filter((el)=>{
+          return el.location==searchLocation
+        })
+        setData(newData)
+      }
     })
     .catch((err)=>console.log(err))
-  }
-  // console.log('page:', page)
-  // console.log('data:', data)
-  // console.log('total:', total)
-  useEffect(()=>{
-    getData(page)
-  },[page])
+  },[page,searchLocation])
+
   const handlePage =(p)=>{
     setPage(p)
   }
@@ -52,24 +56,24 @@ function KindMoment() {
           <Center>
             <Flex w="80%" justifyContent="space-between">
                 <Flex gap="15px">
-                  <Button value="1" p="10px 40px" >Moments</Button>
-                  <Button value="2" p="10px 40px" >Deal Reviews</Button>
-                  <Button value="3" p="10px 40px" >Following</Button>
+                  <Button value="1" p="10px 40px" style={color=="1" ? style1 : style2} onClick={(e)=>setColor(e.target.value)}>Moments</Button>
+                  <Button value="2" p="10px 40px" style={color=="2" ? style1 : style2} onClick={(e)=>setColor(e.target.value)}>Deal Reviews</Button>
+                  <Button value="3" p="10px 40px" style={color=="3" ? style1 : style2} onClick={(e)=>setColor(e.target.value)}>Following</Button>
                 </Flex>
               <Flex gap="15px">
                 <Input bgColor="white" placeholder="Search User or Shop" p="0.5%" rounded="4" variant='unstyled' border="1px solid gray" />
-                <Select bgColor="white">
-                  <option value="All Locations">All Locations</option>
-                  <option value="Klang vally">Klang vally</option>
-                  <option value="Kualalumpur">Kualalumpur</option>
-                  <option value="Petaling Jaya">Petaling Jaya</option>
-                  <option value="Ipoh">Ipoh</option>
-                  <option value="Bangsar">Bangsar</option>
-                  <option value="Cheras">Cheras</option>
-                  <option value="Perek">Perek</option>
-                  <option value="Sepang">Sepang</option>
-                  <option value="Taman Desa">Taman Desa</option>
-                  <option value="Subang">Subang</option>
+                <Select bgColor="white" onChange={(e)=>setSearchLocation(e.target.value)}>
+                  <option value="">All Locations</option>
+                  <option value="2">Klang vally</option>
+                  <option value="3">Kualalumpur</option>
+                  <option value="4">Petaling Jaya</option>
+                  <option value="5">Ipoh</option>
+                  <option value="1">Bangsar</option>
+                  <option value="2">Cheras</option>
+                  <option value="4">Perek</option>
+                  <option value="3">Sepang</option>
+                  <option value="5">Taman Desa</option>
+                  <option value="1">Subang</option>
                 </Select>
                 <Button p="10px 80px" colorScheme='red' color="white">Search Deals</Button>
               </Flex>
