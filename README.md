@@ -8,7 +8,10 @@ Hello everyone, this is a Readme for my construct week project that has been com
 
 The Journey so far has been challenging and fun. this was my second individual project and the deadline was just a week, it all felt like I was working on a real product, and also I tried to enact the overall activity as the real working climate where I used git commands & React project Structure. The planning and other doubt solving activities with IA were done via zoom meetings.
 
-# Netlify Link:
+## Deployed Link:
+- https://quack-building-4956.vercel.app/
+### Download ZIP:
+- https://github.com/swarup-1/quack-building-4956/archive/refs/heads/main.zip 
 
 ## Project Details:
 
@@ -24,17 +27,13 @@ I tried my best to clone the website from scratch based on the knowledge gained 
 
 ## Tech-Stack:
 
-    a.React (Structure)
-
-    b.CSS (styling)
-
-    c.HTML (Structure)
-
-    d.Chakra UI (UI component library)
-
-    e.Advance Javascript & ES6 (functionality)
-
- 
+- React.js
+- React Routing
+- node js
+- CSS
+- HTML
+- Chakra UI Library
+- Advance Javascript (ES6)
 
 Glimpse and Screenshots of our cloned website:
 
