@@ -72,7 +72,8 @@ Glimpse and Screenshots of our cloned website:
 ## 🅓Login page:
 
 - Here we have a Modal Function on any page when users click on Login they get a popup on the screen. If the user is registered with the website, only then he/she can log in with their respective email id & password.
-
+   Default Email : "student@masai.com"
+   Default Password : "masai@123"
 <img width="50%" src="./src/Images/Login.png">
 
 
