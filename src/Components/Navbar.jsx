@@ -21,11 +21,11 @@ import {
   CardBody,
   Stack,
   Heading,
-  CardFooter
  } from '@chakra-ui/react'
  import {Link} from "react-router-dom"
 import { FaLink, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
 import React from "react";
+import { useState } from "react";
 const Navbar = () => {
   let tabStyle = { bg:'#229760',color:"white", fontWeight:"600", fontSize:"18px"}
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -35,6 +35,33 @@ const Navbar = () => {
       onOpen()
     }
   },[pop])
+
+
+  
+  const obj={
+    email:"",
+    password:""
+  }
+  const [form,setForm]=useState(obj)
+  let saveemail="student@masai.com"
+  let savePassword="masai@123"
+  const handleChange=(e)=>{
+    setForm({...form,[e.target.name]:e.target.value})
+  }
+  console.log('form:', form)
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    if(saveemail==form.email){
+      if(savePassword==form.password){
+        alert("Login Success !")
+      }else{
+        alert("Wrong password")
+      }
+    }else{
+      alert("Wrong email")
+    }
+    onClose()
+  }
   return (
     <>
 
@@ -47,9 +74,11 @@ const Navbar = () => {
             <Image objectFit="cover" w="50%" src={MyMeal}/>
           </Center>
             <Text fontSize="20px" align="center" p="10px">Member Login</Text>
-            <Input placeholder="Email" p="2%" variant='unstyled' m="10px" border="1px solid gray" align="center"/>
-            <Input placeholder="Password" p="2%" variant='unstyled' m="10px" border="1px solid gray" align="center"/>
-            <Center><Button m="10px" w="170px" colorScheme='green' onClick={onClose}>Login</Button></Center>
+            <form onSubmit={handleSubmit}>
+            <Input  name="email" onChange={handleChange} placeholder="Email" p="2%" variant='unstyled' m="10px" border="1px solid gray" align="center"/>
+            <Input  name="password" onChange={handleChange} placeholder="Password" p="2%" variant='unstyled' m="10px" border="1px solid gray" align="center"/>
+            <Center><Button  m="10px" w="170px" colorScheme='green' type="submit">Login</Button></Center>
+            </form>
             <hr/>
             <Center><Button m="10px" w="250px" colorScheme='blue' onClick={onClose}>FaceBook</Button></Center>
             <HStack >
@@ -67,7 +96,7 @@ const Navbar = () => {
           </Center>
             <Text fontWeight="500" fontSize="15px" align="center" p="10px">Join KindMeal For FREE Now</Text>
             <Text fontWeight="500" fontSize="13px" align="center">Please select the type of membership to proceed</Text>
-              <Card direction="row" variant='outline' cursor="pointer" m="10px 0px">
+              <Card direction="row" variant='outline' cursor="pointer" m="10px 0px" >
                 <Center><Image src='https://www.kindmeal.my/images/join_normal.png' w="300px" pl="10px"/></Center>
                 <Stack>
                   <CardBody>
