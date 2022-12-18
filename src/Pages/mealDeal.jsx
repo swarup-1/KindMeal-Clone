@@ -1,5 +1,8 @@
 import React from 'react'
 import axios from "axios"
+import style from "../Styles/MealDeals.module.css"
+import Pagination from "../Components/Pagination"
+import { useEffect,useState } from 'react'
 import { 
   Box,
   Center,
@@ -12,9 +15,6 @@ import {
   SimpleGrid,
   Circle
 } from '@chakra-ui/react'
-import style from "../Styles/MealDeals.module.css"
-import Pagination from "../Components/Pagination"
-import { useEffect,useState } from 'react'
 function MealDeal() {
   const [data,setData] = useState([])
   const [total,setTotal] = useState(1)
@@ -59,7 +59,7 @@ function MealDeal() {
           <Text fontSize="sm" p="10px 0px">Browse delicious meat-free, vegetarian deals from top restaurants and cafes! Just click on "Get Free Coupon" to obtain instant discounts and dine at the restaurants. No upfront payment, booking or printing is needed. If you share it on social media, you'll even DOUBLE your discount!</Text>
           <Text fontSize="sm" p="10px 0px">Download our mobile app now to easily get coupons and start dining in a few seconds. Effortlessly save lives, health, environment and money now!</Text>
           <Flex gap="30px">
-            <Input bgColor="white" onChange={((e)=>handleSearchChange(e.target.value))} placeholder="Search Shop or Deal Name" p="0.5%" variant='unstyled' border="1px solid gray" />
+            <Input bgColor="white"placeholder="Search Shop or Deal Name" p="0.5%" variant='unstyled' border="1px solid gray" />
             <Select bgColor="white">
               <option value="">All Categories</option>
               <option value="Pasta">Pasta</option>
