@@ -38,13 +38,13 @@ I tried my best to clone the website from scratch based on the knowledge gained 
 
 Glimpse and Screenshots of our cloned website:
 
-## 🅐 Navbar:
+## Navbar:
 
 - This is the landing page of my website. Clicking an option on the Navbar will redirect to the respective page.
 - 
 <img width="50%" src="./src/Images/Navbar.PNG">
 
-## 🅑 Home Page:
+## Home Page:
 
 - The images on the home page are linked to all Pages. Hence clicking on it will ensure successful redirection to the next Page.
 
@@ -63,7 +63,7 @@ Glimpse and Screenshots of our cloned website:
 - 
 <img width="50%" src="./src/Images/Footer.PNG">
 
-## 🅒 Signup:
+## Signup:
 
 - Here we have a Modal Function on any page when users click on signup they get a popup on the screen with two options like FoodLover & Restaurant / Shop Owner.
 - User can Create account ny filling Signup Form
@@ -71,10 +71,9 @@ Glimpse and Screenshots of our cloned website:
 <br />
 
 <img width="50%" src="./src/Images/Signup.png">
-<br />
 <img width="50%" src="./src/Images/signupForm.png">
 
-## 🅓Login page:
+## Login page:
 
 - Here we have a Modal Function on any page when users click on Login they get a popup on the screen. If the user is registered with the website, only then he/she can log in with their respective email id & password.
 - User can Login with regestered email ID
@@ -83,18 +82,30 @@ Glimpse and Screenshots of our cloned website:
 <img width="50%" src="./src/Images/Login.png">
 
 
-## 🅔 Meal Deals:
+## Meal Deals:
 
-- Users get a Button for the Next Page to get Next more Deals.
-
-- Users get a Button for the Previous Page to get Previous Deals.
+- Users get a Button for the Next & Previous Page to get Deals.
 
 - Users can Paginate on any meals pages by clicking on numbers
+
+- Users can access MealDeals by All categories by selecting input.
+
+- Users can access MealDeals by All Location by selecting input.
 
 <img width="50%" src="./src/Images/MealDeal.png">
 
 
-## 🅕 Help:
+## Kind Moment:
+
+- Users can access Moments by All Location by selecting input.
+
+- Users can Paginate on any Moments pages by clicking on numbers
+
+- Users get a Button for the Next & Previous Page to get Moments.
+
+<img width="50%" src="./src/Images/moment.png">
+
+## Help:
 
 - On the Help Section, users get multiple options for help just like advertising help, General Help, Contact Us, etc.
 
