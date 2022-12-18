@@ -16,9 +16,9 @@ I got given a task to make a functional clone website of The World's 1st Meat-Fr
 I tried my best to clone the website from scratch based on the knowledge gained till unit-4 of Journey at Masai School.
 
 Original LOGO :
-   <img src="https://cdn-images-1.medium.com/max/800/1*ytRsXnjUIdbvycyeZZg6hA.png">     
+   <img width="25%" src="https://cdn-images-1.medium.com/max/800/1*ytRsXnjUIdbvycyeZZg6hA.png">     
 My LOGO :
-   <img src="./src/Images/MyMeal.png" width="20%">
+   <img width="15%" src="./src/Images/MyMeal.png">
 <br />
 
 
@@ -42,7 +42,7 @@ Glimpse and Screenshots of our cloned website:
 
 - This is the landing page of my website. Clicking an option on the Navbar will redirect to the respective page.
 
-<img src="./src/Images/Navbar.PNG">
+<img width="50%" src="./src/Images/Navbar.PNG">
 
 ## 🅑 Home Page:
 
@@ -54,26 +54,26 @@ Glimpse and Screenshots of our cloned website:
 
 - Content page with KindMeal.my official social media link, contacts, policies, information, account, and address.
 
-<img src="./src/Images/Home.png">
+<img width="50%" src="./src/Images/Home.png">
 
 ## Footer bar:
 - Here we have functions such as KindMeal.my official social media link, contacts, policies, and information. account, and address.
 
 - KindMeal.my official social media link, contacts, policies, and information. account, and address.
 
-<img src="./src/Images/Footer.PNG">
+<img width="50%" src="./src/Images/Footer.PNG">
 
 ## 🅒 Signup:
 
 - Here we have a Modal Function on any page when users click on signup they get a popup on the screen with two options like FoodLover & Restaurant / Shop Owner.
 
-<img src="./src/Images/Signup.png">
+<img width="50%" src="./src/Images/Signup.png">
 
 ## 🅓Login page:
 
 - Here we have a Modal Function on any page when users click on Login they get a popup on the screen. If the user is registered with the website, only then he/she can log in with their respective email id & password.
 
-<img src="./src/Images/Login.png">
+<img width="50%" src="./src/Images/Login.png">
 
 
 ## 🅔 Meal Deals:
@@ -84,15 +84,15 @@ Glimpse and Screenshots of our cloned website:
 
 - Users can Paginate on any meals pages by clicking on numbers
 
-<img src="./src/Images/MealDeal.png">
+<img width="50%" src="./src/Images/MealDeal.png">
 
 
 ## 🅕 Help:
 
 - On the Help Section, users get multiple options for help just like advertising help, General Help, Contact Us, etc.
 
-<img src="./src/Images/Help.png">
+<img width="50%" src="./src/Images/Help.png">
 
-Technically Help is the last page our team developed for the best User Interface UI smooth Operations.
+Technically Help is the last page developed for the best User Interface UI smooth Operations.
 
 

@@ -1,8 +1,9 @@
 import React from 'react'
-
+import { Heading } from '@chakra-ui/react'
 function Mobileapp() {
   return (
-    <div>Mobileapp</div>
+    <Heading align="center" p="20px">Mobile App</Heading>
+
   )
 }
 

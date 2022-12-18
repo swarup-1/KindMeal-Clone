@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
 import MealDeal from "../Pages/MealDeal"
 import KindMoment from "../Pages/KindMoment"
-import Recipies from "../Pages/Recipies"
+import Recipes from "../Pages/Recipes"
 import Directory from "../Pages/Directory"
 import Articles from "../Pages/Articles"
 import MobileApp from "../Pages/MobileApp"
@@ -13,7 +13,7 @@ const AllRoutes = () => {
       <Route path="/"           element={<Home />} />
       <Route path="/mealdeal"   element={<MealDeal/>} />
       <Route path="/kindMoment" element={<KindMoment/>} />
-      <Route path="/recipies"   element={<Recipies/>} />
+      <Route path="/recipes"   element={<Recipes/>} />
       <Route path="/directory"  element={<Directory/>} />
       <Route path="/articles"   element={<Articles/>} />
       <Route path="/mobileapp"  element={<MobileApp/>} />
