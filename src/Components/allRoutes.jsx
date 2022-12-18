@@ -7,6 +7,7 @@ import Directory from "../Pages/Directory"
 import Articles from "../Pages/Articles"
 import MobileApp from "../Pages/MobileApp"
 import Help from "../Pages/Help"
+import Signup from "../Pages/Signup"
 const AllRoutes = () => {
   return (
     <Routes>
@@ -18,6 +19,7 @@ const AllRoutes = () => {
       <Route path="/articles"   element={<Articles/>} />
       <Route path="/mobileapp"  element={<MobileApp/>} />
       <Route path="/help"       element={<Help/>} />
+      <Route path="/signup"       element={<Signup/>} />
     </Routes>
   );
 };

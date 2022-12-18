@@ -1,64 +1,62 @@
-import MyMeal from "../Images/MyMeal.png" 
 import { 
   Tabs,
   TabList,
   Tab,
-  Center,
   VStack,
+  Center,
   Image,
   HStack,
-  Box,
-  Text,
-  Button,
   Modal,
   ModalOverlay,
   ModalContent,
+  Input,
+  Box,
+  Text,
+  Button,
   Flex,
   ModalCloseButton,
-  Input,
   useDisclosure,
   Card,
   CardBody,
   Stack,
   Heading,
- } from '@chakra-ui/react'
+} from '@chakra-ui/react'
+import MyMeal from "../Images/MyMeal.png" 
  import {Link} from "react-router-dom"
-import { FaLink, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
+ import { FaLink, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
 import React from "react";
 import { useState } from "react";
 const Navbar = () => {
+  const userData= JSON.parse(localStorage.getItem("userData"))
   let tabStyle = { bg:'#229760',color:"white", fontWeight:"600", fontSize:"18px"}
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [pop,setPop] = React.useState("")
-  React.useEffect(()=>{
-    if(pop!=""){
-      onOpen()
-    }
-  },[pop])
-
-
   
   const obj={
     email:"",
     password:""
   }
   const [form,setForm]=useState(obj)
-  let saveemail="student@masai.com"
-  let savePassword="masai@123"
   const handleChange=(e)=>{
-    setForm({...form,[e.target.name]:e.target.value})
+    setForm({...form,[e.target.type]:e.target.value})
   }
   console.log('form:', form)
   const handleSubmit=(e)=>{
     e.preventDefault();
-    if(saveemail==form.email){
-      if(savePassword==form.password){
-        alert("Login Success !")
+    if(userData.email==form.email){
+      if(userData.password==form.password){
+        if (window.confirm('Login Successful ! Go to Home-page')){
+          window.location.href="/";
+          };
       }else{
-        alert("Wrong password")
+        if (window.confirm('Wrong Password')){
+          window.location.href="/"
+          };
       }
     }else{
-      alert("Wrong email")
+      if (window.confirm('Wrong Email')){
+        window.location.href="/"
+        };
     }
     onClose()
   }
@@ -75,8 +73,8 @@ const Navbar = () => {
           </Center>
             <Text fontSize="20px" align="center" p="10px">Member Login</Text>
             <form onSubmit={handleSubmit}>
-            <Input  name="email" onChange={handleChange} placeholder="Email" p="2%" variant='unstyled' m="10px" border="1px solid gray" align="center"/>
-            <Input  name="password" onChange={handleChange} placeholder="Password" p="2%" variant='unstyled' m="10px" border="1px solid gray" align="center"/>
+            <Input  type="email" onChange={handleChange} placeholder="Email" p="2%" variant='unstyled' m="10px" border="1px solid gray" align="center"/>
+            <Input  type="password" onChange={handleChange} placeholder="Password" p="2%" variant='unstyled' m="10px" border="1px solid gray" align="center"/>
             <Center><Button  m="10px" w="170px" colorScheme='green' type="submit">Login</Button></Center>
             </form>
             <hr/>
@@ -96,6 +94,7 @@ const Navbar = () => {
           </Center>
             <Text fontWeight="500" fontSize="15px" align="center" p="10px">Join KindMeal For FREE Now</Text>
             <Text fontWeight="500" fontSize="13px" align="center">Please select the type of membership to proceed</Text>
+            <Link to="/signup" onClick={onClose}>
               <Card direction="row" variant='outline' cursor="pointer" m="10px 0px" >
                 <Center><Image src='https://www.kindmeal.my/images/join_normal.png' w="300px" pl="10px"/></Center>
                 <Stack>
@@ -105,6 +104,7 @@ const Navbar = () => {
                   </CardBody>
                 </Stack>
               </Card>
+            </Link>
               <Card direction="row" variant='outline' cursor="pointer" m="10px 0px">
                 <Center><Image src='https://www.kindmeal.my/images/join_shop.png' w="300px" pl="10px"/></Center>
                 <Stack>
@@ -115,7 +115,7 @@ const Navbar = () => {
                 </Stack>
               </Card>
             <Flex justify="space-between">
-              <Link onClick={()=>setPop("login")}>Member Login</Link><Link>Forgot password?</Link>
+              <Link onClick={()=>(setPop("login"),onOpen())}>Member Login</Link><Link>Forgot password?</Link>
             </Flex>
         </ModalContent>
        </Modal>
@@ -128,10 +128,10 @@ const Navbar = () => {
           <Link href="https://www.kindmeal.my/widget.htm">  <FaLink/></Link><Link href="https://www.facebook.com/KindMeal.my">  <FaFacebookSquare/></Link><Link href="https://twitter.com/KindMeal">  <FaTwitterSquare/></Link>
         </HStack>
         <HStack w="30%" justify="space-around">
-          <Text pr="5px" onClick={()=>setPop("login")}>Login</Text>
+          <Text p="5px" cursor="pointer" onClick={()=>(setPop("login"),onOpen())}>Login</Text>
           <Button w="90px" h="22px" borderRadius="5px" fontWeight="500" fontSize="13px" bg='rgb(53,97,159)' variant='solid'>FaceBook</Button>
           <Button w="60px" h="22px" borderRadius="5px" fontWeight="500" fontSize="13px" bg="gray" variant='solid' onClick={onOpen}>Email</Button>
-          <Text onClick={()=>setPop("signup")}>Sign Up</Text>
+          <Text cursor="pointer" p="5px" onClick={()=>(setPop("signup"),onOpen())}>Sign Up</Text>
         </HStack>
       </HStack>
         <Box w="100%">
