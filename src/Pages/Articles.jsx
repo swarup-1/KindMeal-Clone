@@ -1,8 +1,9 @@
 import React from 'react'
-
+import { Heading } from '@chakra-ui/react'
 function Articles() {
   return (
-    <div>Articles</div>
+    <Heading align="center" p="20px">Articles</Heading>
+
   )
 }
 

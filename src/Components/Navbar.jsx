@@ -111,7 +111,7 @@ const Navbar = () => {
               <Tab _selected={tabStyle} style={tabStyle}><Link to="/">          Home         </Link></Tab>
               <Tab _selected={tabStyle} style={tabStyle}><Link to="/mealdeal">  Meal Deals   </Link></Tab>
               <Tab _selected={tabStyle} style={tabStyle}><Link to="/kindMoment">Kind Moments </Link></Tab>
-              <Tab _selected={tabStyle} style={tabStyle}><Link to="/recipies">  Recipes      </Link></Tab>
+              <Tab _selected={tabStyle} style={tabStyle}><Link to="/recipes">  Recipes      </Link></Tab>
               <Tab _selected={tabStyle} style={tabStyle}><Link to="/directory"> Directory    </Link></Tab>
               <Tab _selected={tabStyle} style={tabStyle}><Link to="/articles"> Articles     </Link></Tab>
               <Tab _selected={tabStyle} style={tabStyle}><Link to="/mobileapp"> Mobile APP   </Link></Tab>
