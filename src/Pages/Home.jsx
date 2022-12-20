@@ -11,6 +11,7 @@ import {
   Card,
   Text,
   Heading,
+  SimpleGrid,
   Link
  } from '@chakra-ui/react'
 function Home() {
@@ -167,38 +168,38 @@ function Home() {
   return (
   <Box background= "linear-gradient(180deg, rgba(255,255,255,1) 52%, rgba(233,233,233,1) 100%)">
     <Center>
-      <Center className={styles.Carousel}>
-        <Image w="70%" h="370px" pr="1.5px" src={images[Count].dish}/>
-        <Image w="30%" h="370px" src={images[Count].hotel}/>
+      <Center className={styles.Carousel} w={{base:"100%", md:"80%"}}>
+        <Image w="70%" h={{base:"200px",md:"370px"}} pr="1.5px" src={images[Count].dish}/>
+        <Image w="30%" h={{base:"200px",md:"370px"}} src={images[Count].hotel}/>
       </Center>
     </Center>
     <Center>
-      <HStack className={styles.images} justify="space-between" w="80%" shadow='md' p="25px" mb="50px">
-        {images.map((el,i)=><Image className={styles.image} w="120px" h="80px" src={el.dish} onClick={()=>setCount(i)}/>)}
+      <HStack className={styles.images} justify="space-between" w={{base:"100%",md:"80%"}}  shadow='md' p="25px" mb="50px">
+        {images.map((el,i)=><Image className={styles.image} w="120px" h={{base:"20px",sm:"40px",md:"80px"}}  src={el.dish} onClick={()=>setCount(i)}/>)}
       </HStack>
     </Center>
 
       {cardList.map((e)=>(
         <Center>
-            <Flex shadow= "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" w="80%" p="15px" mb="50px" direction="column">
+            <Flex shadow= "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" w={{base:"100%",md:"80%"}} p="15px" mb="50px" direction="column">
             <Flex justify="space-between" p="10px">
               <Box>
-                <Heading fontSize="22px">{e.heading}</Heading>
+                <Heading fontSize={{base:"10px",md:"22px"}}>{e.heading}</Heading>
               </Box>
               <Box>  
-                <Link>{e.otherLinks.li1}</Link>
-                <Link>{e.otherLinks.li2}</Link>
-                <Link>{e.otherLinks.li3}</Link>
+                <Link fontSize={{base:"10px",md:"20px"}}>{e.otherLinks.li1}</Link>
+                <Link fontSize={{base:"10px",md:"20px"}}>{e.otherLinks.li2}</Link>
+                <Link fontSize={{base:"10px",md:"20px"}}>{e.otherLinks.li3}</Link>
               </Box>
             </Flex>
-            <Flex justifyContent="space-around" gap="20px" flexDirection="row">
+            <SimpleGrid columns={{base:3, sm:5}} justifyContent="space-around" gap={{base:"10px",sm:"15px",md:"17px",xl:"20px"}}>
               {e.elements && e.elements.map((el)=>
-                  <Box w="200px">
-                    <Image src={el.img} h="200px" w="100%" objectFit='cover' borderRadius="5px"/>
-                    <Link textAlign="justify" fontSize="12px" >{el.link}</Link>
+                  <Box w={{base:"60px",sm:"100px",md:"200px"}}>
+                    <Image src={el.img} h={{base:"80px",sm:"100px",md:"150px",xl:"200px"}}  w="100%" objectFit='cover' borderRadius="5px"/>
+                    <Link textAlign="justify" fontSize={{base:"8px",md:"12px"}} >{el.link}</Link>
                   </Box>
               )}
-            </Flex>
+            </SimpleGrid>
           </Flex>
         </Center>
       ))}

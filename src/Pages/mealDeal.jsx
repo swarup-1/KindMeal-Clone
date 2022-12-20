@@ -55,14 +55,14 @@ function MealDeal() {
     <Box background= "linear-gradient(180deg, rgba(255,255,255,1) 52%, rgba(233,233,233,1) 100%)">
       <Center bg="#f0f0f0" mb="20px">
         <Box p="20px" w="80%" >
-          <Flex gap="20px">
+          <Flex gap={{base:"10px" ,md:"20px"}} flexDirection={{base:"column" ,md:"row"}}>
             <Text fontWeight="500" fontSize="3xl">Meat-Free Deals</Text>
             <Text fontWeight="500" fontSize="2xl" > | </Text>
             <Text fontWeight="500" fontSize="2xl" color="#00000080">Restaurants In Malaysia</Text>
           </Flex>
           <Text fontSize="sm" p="10px 0px">Browse delicious meat-free, vegetarian deals from top restaurants and cafes! Just click on "Get Free Coupon" to obtain instant discounts and dine at the restaurants. No upfront payment, booking or printing is needed. If you share it on social media, you'll even DOUBLE your discount!</Text>
           <Text fontSize="sm" p="10px 0px">Download our mobile app now to easily get coupons and start dining in a few seconds. Effortlessly save lives, health, environment and money now!</Text>
-          <Flex gap="30px">
+          <Flex gap={{base:"10px" ,md:"30px"}} flexDirection={{base:"column" ,md:"row"}}>
             <Input bgColor="white"placeholder="Search Shop or Deal Name" p="0.5%" variant='unstyled' border="1px solid gray" />
             <Select bgColor="white" onChange={(e)=>setSearchLocation(e.target.value)}>
               <option value="">All Categories</option>

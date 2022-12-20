@@ -13,31 +13,31 @@ function Help() {
   return (<Box background= "linear-gradient(180deg, rgba(255,255,255,1) 52%, rgba(233,233,233,1) 100%)">
 
     <Center>
-      <Flex w="80%" mt="20px" gap="50px">
-        <Flex direction="column" gap="50px">
+      <Flex w={{base:"50%",sm:"60%",md:"80%"}} mt="20px" gap={{base:"20px",sm:"35px",md:"50px"}}>
+        <Flex direction="column" gap={{base:"20px",sm:"35px",md:"50px"}}>
         <Card className={styles.Card} >
-          <Center><Image src='https://www.kindmeal.my/images/join_normal.png' h="120px" /></Center>
-          <Center><Text pt="25px" fontWeight="500">General Help</Text></Center>
+          <Center><Image src='https://www.kindmeal.my/images/join_normal.png' h={{base:"50px",sm:"90px",md:"120px"}} /></Center>
+          <Center><Text pt={{base:"10px",sm:"18",md:"25px"}} fontWeight="500">General Help</Text></Center>
         </Card>
         <Card className={styles.Card}>
-          <Center><Image src='https://www.kindmeal.my/images/join_shop.png' h="120px" /></Center>
-          <Center><Text pt="25px" fontWeight="500">Merchant Help</Text></Center>
+          <Center><Image src='https://www.kindmeal.my/images/join_shop.png' h={{base:"50px",sm:"90px",md:"120px"}} /></Center>
+          <Center><Text pt={{base:"10px",sm:"18",md:"25px"}} fontWeight="500">Merchant Help</Text></Center>
         </Card>
         <Card className={styles.Card}>
-          <Center><Image src='https://www.kindmeal.my/images/icon-megaphone.png' h="120px" /></Center>
-          <Center><Text pt="25px" fontWeight="500">Advertising</Text></Center>
+          <Center><Image src='https://www.kindmeal.my/images/icon-megaphone.png' h={{base:"50px",sm:"90px",md:"120px"}} /></Center>
+          <Center><Text pt={{base:"10px",sm:"18",md:"25px"}} fontWeight="500">Advertising</Text></Center>
         </Card>
         <Card className={styles.Card} bg="white">
-          <Center><Image src='https://www.kindmeal.my/images/about_us.png' h="120px" /></Center>
-          <Center><Text pt="25px" fontWeight="500">About KindMeal</Text></Center>
+          <Center><Image src='https://www.kindmeal.my/images/about_us.png' h={{base:"50px",sm:"90px",md:"120px"}} /></Center>
+          <Center><Text pt={{base:"10px",sm:"18",md:"25px"}} fontWeight="500">About KindMeal</Text></Center>
         </Card>
         <Card className={styles.Card} bg="white">
-          <Center><Image src='https://www.kindmeal.my/images/about_hero.png' h="120px" /></Center>
-          <Center><Text pt="25px" fontWeight="500">SuperHero Guide</Text></Center>
+          <Center><Image src='https://www.kindmeal.my/images/about_hero.png' h={{base:"50px",sm:"90px",md:"120px"}} /></Center>
+          <Center><Text pt={{base:"10px",sm:"18",md:"25px"}} fontWeight="500">SuperHero Guide</Text></Center>
         </Card>
         <Card className={styles.Card} bg="white">
-          <Center><Image src='https://www.kindmeal.my/images/contact.png' h="120px" /></Center>
-          <Center><Text pt="25px" fontWeight="500">Contact Us</Text></Center>
+          <Center><Image src='https://www.kindmeal.my/images/contact.png' h={{base:"50px",sm:"90px",md:"120px"}} /></Center>
+          <Center><Text pt={{base:"10px",sm:"18",md:"25px"}} fontWeight="500">Contact Us</Text></Center>
         </Card>
         </Flex>
         <Box className={styles.Questions}>
