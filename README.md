@@ -8,8 +8,9 @@ Hello everyone, this is a Readme for my construct week project that has been com
 
 The Journey so far has been challenging and fun. this was my second individual project and the deadline was just a week, it all felt like I was working on a real product, and also I tried to enact the overall activity as the real working climate where I used git commands & React project Structure. The planning and other doubt solving activities with IA were done via zoom meetings.
 
-## Deployed Link:
+### Deployed Links:
 - https://quack-building-4956.vercel.app/
+- https://kindmeal9.netlify.app/
 ### Download ZIP:
 - https://github.com/swarup-1/quack-building-4956/archive/refs/heads/main.zip 
 
